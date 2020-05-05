@@ -45,7 +45,7 @@
     "eslint": "^4.18.2",
     "nodemon": "^1.9.2"
   },
-  scripts: {
+  "scripts": {
   	preinstall: "rm -rf /dist"
   }
 }
