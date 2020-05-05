@@ -7,7 +7,7 @@
     "dev": "nodemon -w src --exec \"babel-node src",
     "build": "babel src -s -D -d dist",
     "start": "node dist",
-    "prestart": "npm run -s build"
+    "prestart": "rm -rf /dist;npm run -s build"
   },
   "babel": {
     "presets": [
@@ -44,8 +44,5 @@
     "babel-register": "^6.18.0",
     "eslint": "^4.18.2",
     "nodemon": "^1.9.2"
-  },
-  "scripts": {
-  	preinstall: "rm -rf /dist"
   }
 }
