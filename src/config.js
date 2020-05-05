@@ -1,7 +1,7 @@
 import parseArgs from 'minimist'
 import url from 'url'
 const defaultConfig = {
-	"port": 80,
+	"port": process.env.PORT || 5000,
 	"bodyLimit": "10mb",
 	"corsHeaders": ["Link"]
 }
