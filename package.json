@@ -1,6 +1,6 @@
 {
   "name": "Block-Tor",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Sample Node JS based REST API to identify requests made from TOR network",
   "main": "dist",
   "scripts": {
