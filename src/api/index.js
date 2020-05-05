@@ -8,8 +8,6 @@ import fs from 'fs'
 
 export default ({ config, storage }) => {
 	let api = Router()
-	const DETECTED_BADGE = fs.readFileSync('${__dirname}/assets/tor-detected.svg')
-	const NOT_DETECTED_BADGE = fs.readFileSync('${__dirname}/assets/tor-not-detected.svg')
 	api.get('/', (req, res, next) => {
 		const server = req.connection.address()
 		const client = ipware().get_ip(req)
@@ -38,10 +36,10 @@ export default ({ config, storage }) => {
 			console.log('${moment().toISOString()} 200 ${JSON.stringify(result)}')
 			
 			if (result.found) {
-				res.writeHead(200, {'Content-Type': 'image/svg+xml;charset=utf-8'})
+				res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'})
 				res.end("PART OF TOR NETWORK")
 			} else {
-				res.writeHead(200, {'Content-Type': 'image/svg+xml;charset=utf-8'})
+				res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'})
 				res.end("NOT PART OF TOR NETWORK")
 			}
 		})
