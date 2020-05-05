@@ -39,10 +39,10 @@ export default ({ config, storage }) => {
 			
 			if (result.found) {
 				res.writeHead(200, {'Content-Type': 'image/svg+xml;charset=utf-8'})
-				res.end(DETECTED_BADGE)
+				res.end("PART OF TOR NETWORK")
 			} else {
 				res.writeHead(200, {'Content-Type': 'image/svg+xml;charset=utf-8'})
-				res.end(NOT_DETECTED_BADGE)
+				res.end("NOT PART OF TOR NETWORK")
 			}
 		})
 		.catch(err => {
