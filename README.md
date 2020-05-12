@@ -15,3 +15,7 @@ API Specs:
 |destIp|String
 |destPort|String|If your service is running on some port)
 |found|Bool|It will tell if the request was from TOR or NOT
+
+Heroku Commands:
+"C:\Program Files\heroku\bin\heroku.cmd" logs -a blocktor
+"C:\Program Files\heroku\bin\heroku.cmd" config:set NODE_MODULES_CACHE=true -a block-tor
